@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+
+:root {
+    --dark-green: #336b75;
+}
+
+* {
+    box-sizing: border-box;  /*при установке padding, border и пр. контент будет вжиматься внутрь блока, а не захватывать новые
+                                участки страницы, как при значении content-box*/
+}
+
+body {
+    font-family: 'PT Sans Narrow';
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /*100% от высоты окна*/
+    margin: 0;
+}
+
+small {
+    font-weight: normal;
+}
+
+
+.container {
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 400px;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+.header {
+    padding: 20px 40px;
+    border-bottom: 1px solid black;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+
+.form {
+    padding: 30px 40px;
+}
+
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+
+.form-control i {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    visibility: hidden;
+}
+
+
+/* properties's values based on the input (valid/invalid) */
+
+.form-control.success input {
+    border-color: #42c478;
+}
+
+.form-control.error input {
+    border-color: rgb(255, 46, 46);
+}
+
+
+.form-control.success i.fa-check-circle {
+    visibility: visible;
+    color: #42c478;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: rgb(255, 46, 46);
+}
+
+.form-control.error small {
+    visibility: visible;
+    color: rgb(255, 46, 46);
+}
+
+.form-control small {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+/*=========================================*/
+
+.form button {
+    background-color: var(--dark-green);
+    transition: background-color 0.35s;
+    color: white;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-family: inherit;
+}
+
+
+.form button:hover {
+    background-color: #08cc91;
+}

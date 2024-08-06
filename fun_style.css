@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+
+:root {
+    --dark-green: #336b75;
+}
+
+
+ /*при установке padding, border и пр.
+контент будет вжиматься внутрь блока,
+а не захватывать новые участки  страницы,
+как при значении content-box*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Sans Narrow';
+    margin: 0;
+}
+div.input-wrapper label{
+    font-size: 18px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+div.reg-wrapper0 {
+    display: flex;
+    justify-content: center;
+}
+
+div.reg-wrapper {
+   
+    display: inline-block; /*this also makes the block accept the width
+    and height of his widest and tallest element(s)*/
+}
+
+div.container0 {
+    display: flex;
+    max-width: 100%;  
+}
+
+div.container1 {
+    display: inline-block;
+    padding-top: 1rem;
+}
+
+small {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.container2 {
+    background: #fff;  
+    width: 73.2vw;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+.reg-header {
+    padding: 20px 40px;
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: center;
+    min-height: 92px;
+}
+
+div.reg-header h2 {
+    margin: 0;
+    text-align: center;
+    width: 400px;
+    padding: 10px;
+    font-size: 26px;    
+}
+
+ /*how do labels, inputs etc. inherit this property? do they
+have padding 30+30 (padding from the 
+borders of their form-control divs)?
+seems like not*/
+.form {
+    padding: 0 40px;
+}
+
+
+.form-control {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+    width: 850px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.sign-in.form-control {
+    width: initial;
+}
+
+@media screen and (max-width: 926px){
+    .form-wrapper1 .form-control {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+div.input-wrapper * {
+    font-size: 16px;
+}
+
+.form-control label {
+    display: block;
+    
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 2px solid #979797;
+    border-radius: 4px;
+    display: inline-block;
+    width: 400px;
+    padding: 10px;
+    
+    font-family: inherit;
+}
+
+div.input-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.form-control i {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    visibility: hidden;
+}
+
+div.toggle_visibility {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    cursor: pointer;
+    top: 43px;
+    right: 10px;
+    /* background: url(https://static.waterstones.com/1.36.7/img/mobile-app/icons/eye-grey.png); */
+}
+
+/* properties' values based on the input (valid/invalid) */
+
+img#lib {
+    opacity: 0.5;
+}
+
+.container2 .reg-header h2{
+    box-shadow: 0px 0px 5px rgb(150, 150, 150);
+}
+
+.input-wrapper.success input {
+    border-color: #42c478;
+}
+
+.input-wrapper.error input {
+    border-color: tomato;
+}
+
+/*these icons have been disabled in html code*/
+.input-wrapper.success i.fa-check-circle {
+    visibility: visible;
+    color: #42c478;
+}
+
+.input-wrapper.error i.fa-exclamation-circle {
+    visibility: visible;
+    color: tomato;
+}
+
+/*===============================*/
+
+.input-wrapper.error small {
+    visibility: visible;
+    color: tomato;
+}
+
+.form-control small {
+    position: absolute;
+    bottom: -1.35rem;
+    left: 0;
+    visibility: hidden;
+}
+
+/*=========================================*/
+
+.form button {
+    background: var(--dark-green);
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 1rem;
+    font-size: 20px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+.form button:hover {
+    background: #08cc91;
+}
+
+/*================= SIGN IN PAGE ==============*/
+
+div.form-control.sign-in {
+    margin: 30px auto;
+    margin-bottom: 15px;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+
+div.form-control.sign-in .input-wrapper input {
+    position: relative;
+}
+
+
+div.input-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+span#register, span#forgot-password p{
+    text-align: center;
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+}
+
+form.sign-in.form button{
+    width: 500px;
+}
+
